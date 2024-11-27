@@ -12,11 +12,12 @@ file_path = r"C:\Users\Jaya\Documents\Bikram Chatterjee\Python\ilove-pdf-automat
 download_dir = r"C:\Users\Jaya\Downloads"
 
 # Configure Chrome options
+
 chrome_options = webdriver.ChromeOptions()
 prefs = {"download.default_directory": download_dir}
 chrome_options.add_experimental_option("prefs", prefs)
 
-# Initialize WebDriver
+# Initialize WebDriver for chrome
 driver = webdriver.Chrome(options=chrome_options)
 
 try:
@@ -98,3 +99,4 @@ try:
 finally:
     # Close the browser
     driver.quit()
+    print("done")
